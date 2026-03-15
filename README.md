@@ -23,9 +23,10 @@ TruthLens AI is a machine learning project dedicated to classifying news article
 
 3. **Install Dependencies**
    - Ensure you have Python installed.
-   - Install the required libraries (pandas, numpy, seaborn, matplotlib, scikit-learn).
+   - It is recommended to use a virtual environment.
+   - Install the required libraries using the `requirements.txt` file:
    ```bash
-   pip install pandas numpy seaborn matplotlib scikit-learn notebook
+   pip install -r requirements.txt
    ```
 
 4. **Run the Notebook**
