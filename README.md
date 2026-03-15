@@ -31,17 +31,17 @@ TruthLens AI is a machine learning project dedicated to classifying news article
 
 3. **Install Dependencies**
    - Ensure you have Python installed.
-   - It is recommended to use a virtual environment.
+   - It is recommended to use a virtual environment if you are not using Google Colab.
    - Install the required libraries using the `requirements.txt` file:
    ```bash
    pip install -r requirements.txt
    ```
 
 4. **Run the Notebook**
+   - You can use Google Colab, or run the notebook locally:
    ```bash
    jupyter notebook TruthLens-AI.ipynb
    ```
-   - Or you can use Google Colab as well.
 
 ## Workflow
 
@@ -50,3 +50,17 @@ TruthLens AI is a machine learning project dedicated to classifying news article
 - **Model Saving and Loading**: The trained models and vocabulary vectorizer are saved into a `models/` directory using `joblib`. 
    - *Quick Start*: If the models are already saved in the `models/` folder, you do not need to run the entire notebook again. You can simply run the first two cells (for imports and data prep), then scroll directly to the **"Loading the Models and Predicting"** section to load the models, and run the final cell to test custom news inputs.
 - **Evaluation**: The models are evaluated using accuracy scores and classification reports to determine their effectiveness in identifying fake news.
+
+
+## Quick Prediction (Without Retraining)
+
+If you only want to run predictions using the already trained models, you do not need to execute the entire notebook.
+
+Follow these steps:
+
+1. Run the **first cell** (the `pip install` cell) to install required dependencies.
+2. Run the **second cell** to import the necessary Python libraries (such as `pandas`, `joblib`, etc.).
+3. Skip the model training cells.
+4. Scroll to the **"Loading the Models and Predicting"** section.
+5. Run that cell to load the saved models from the `models/` directory.
+6. Run the **final cell** and enter your custom news text to see the prediction results.
