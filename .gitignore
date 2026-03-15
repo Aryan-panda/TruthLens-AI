@@ -27,3 +27,7 @@ Thumbs.db
 # Project Data
 data/
 *.csv
+
+# Models
+models/
+*.pkl

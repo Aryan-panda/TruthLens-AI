@@ -5,10 +5,18 @@ TruthLens AI is a machine learning project dedicated to classifying news article
 ## Project Structure
 
 - `TruthLens-AI.ipynb`: The main Jupyter Notebook containing the data exploration, preprocessing, model training, and evaluation code.
+- `requirements.txt`: List of Python dependencies required to run the project.
 - `data/`: Directory intended to contain the datasets used for training and testing.
   - `Fake.csv`: Dataset containing fake news articles.
   - `True.csv`: Dataset containing true news articles.
   - *(Note: Datasets are excluded from source control due to size limitations.)*
+- `models/`: Directory containing the trained models and vocabulary vectorizer.
+  - `decision_tree_model.pkl`: Decision Tree model.
+  - `logistic_regression_model.pkl`: Logistic Regression model.
+  - `gradient_boosting_model.pkl`: Gradient Boosting model.
+  - `random_forest_model.pkl`: Random Forest model.
+  - `tfidf_vectorizer.pkl`: TF-IDF Vectorizer.
+  - *(Note: Models are excluded from source control due to size limitations.)*
 
 ## Setup and Installation
 
@@ -33,9 +41,12 @@ TruthLens AI is a machine learning project dedicated to classifying news article
    ```bash
    jupyter notebook TruthLens-AI.ipynb
    ```
+   - Or you can use Google Colab as well.
 
 ## Workflow
 
 - **Data Loading and Preprocessing**: The notebook loads the data, creates a target 'class' variable, and performs necessary text cleaning.
 - **Model Training**: Uses classification algorithms provided by `scikit-learn` to train models on the text data.
+- **Model Saving and Loading**: The trained models and vocabulary vectorizer are saved into a `models/` directory using `joblib`. 
+   - *Quick Start*: If the models are already saved in the `models/` folder, you do not need to run the entire notebook again. You can simply run the first two cells (for imports and data prep), then scroll directly to the **"Loading the Models and Predicting"** section to load the models, and run the final cell to test custom news inputs.
 - **Evaluation**: The models are evaluated using accuracy scores and classification reports to determine their effectiveness in identifying fake news.
